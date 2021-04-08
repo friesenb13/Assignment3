@@ -48,25 +48,32 @@ function draw() {
 	var position = ctracker.getCurrentPosition();
 
 
+	image(vidCapture, 0, 0);
+	
 	if(position){
 
+
+	var invert= map(position[62][0], 100, 500);
+	var gray= map(position[62][0],501, 800);
+
+	if (position[62][0] < width/2) {
+
+		console.log("yes");
+	filter(INVERT, invert);
+
+	} 
+		else {
+			console.log("no");
+	filter(GRAY, gray);
+
+	}	
 		// ctracker.draw(drawCanvas);
 
 		// print("x: " + position[62][0])
+	// image(vidCapture, 0, 0);
 
-
-//want video feed to have invert filter when face is on right side of screen, and 
-//gray filter on left side of screen
-
-	var invert= map(position[62][0], 100, 500, true)
-	var gray= map(position[62][1],501, 800, true)
-
-
-//show your face video or not 
-	image(vidCapture, 0, 0);
-
-	filter(INVERT, invert);
-	filter(GRAY, gray);
+	
+	
 
 }
 	
