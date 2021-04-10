@@ -1,8 +1,6 @@
 
 var vidCapture, ctracker, drawCanvas;
 
-//https://p5js.org/reference/#/p5/createSlider
-// let slider;
 
 function setup(){
 
@@ -22,21 +20,9 @@ function setup(){
 
 	drawCanvas = document.getElementById('defaultCanvas0');
 
-// color slider background
-	// colorMode(HSB);
-	// slider = createSlider(0, 360, 60, 40);
-	// slider.position(10,10);
-	// slider.style('width', '80px');
-
-
 }
 
 function draw() {
-
-//color background slider
-	// let val = slider.value();
-	// background(val, 100, 100, 10);
-	// background(255, 10);
 
 
 	translate(vidCapture.width, 0);
@@ -49,39 +35,30 @@ function draw() {
 
 
 	image(vidCapture, 0, 0);
-	
+
 	if(position){
 
-
-	var invert= map(position[62][0], 100, 500);
-	var gray= map(position[62][0],501, 800);
+	// var post= map(position[62][1]);
+	var invert= map(position[62][0]);
+	var gray= map(position[62][0]);
 
 	if (position[62][0] < width/2) {
 
-		console.log("yes");
+		console.log("invert");
 	filter(INVERT, invert);
 
 	} 
 		else {
-			console.log("no");
+			console.log("gray");
 	filter(GRAY, gray);
 
 	}	
+
+
 		// ctracker.draw(drawCanvas);
-
-		// print("x: " + position[62][0])
-	// image(vidCapture, 0, 0);
-
-	
 	
 
 }
 	
 
 }
-
-
-
-// function windowResized() {
-//   resizeCanvas(windowWidth/2, windowHeight/2);
-// }
