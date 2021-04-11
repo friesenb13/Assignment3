@@ -24,6 +24,7 @@ function setup(){
 
 function draw() {
 
+	background(0);
 
 	translate(vidCapture.width, 0);
 
@@ -38,9 +39,9 @@ function draw() {
 
 	if(position){
 
-	var opaque= map(position[62][0]);
-	var invert= map(position[62][0]);
-	var gray= map(position[62][0]);
+	// var opaque= map(position[62][0]);
+	// var invert= map(position[62][0]);
+	// var gray= map(position[62][0]);
 
 	if (position[62][0] < 400) {
 
