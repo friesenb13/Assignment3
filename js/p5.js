@@ -5,7 +5,7 @@ var vidCapture, ctracker, drawCanvas;
 function setup(){
 
 
-	var cnv = createCanvas(windowWidth, windowHeight);
+	var cnv = createCanvas(1000, 1000);
 	cnv.parent("p5canvas");
 
 	//p5 method for creating a video stream
@@ -38,22 +38,35 @@ function draw() {
 
 	if(position){
 
-	// var post= map(position[62][1]);
+	var opaque= map(position[62][0]);
 	var invert= map(position[62][0]);
 	var gray= map(position[62][0]);
 
-	if (position[62][0] < width/2) {
+	if (position[62][0] < 400) {
 
 		console.log("invert");
-	filter(INVERT, invert);
+	filter(INVERT);
 
 	} 
-		else {
+		
+
+	if (position[62][0] < 500) {
 			console.log("gray");
-	filter(GRAY, gray);
+	filter(GRAY);
 
 	}	
 
+	if (position[62][0] < 11000) {
+			console.log("opaque");
+	filter(OPAQUE);
+
+	}
+
+	// if (position[62][0] < 900) {
+	// 		console.log("thresh");
+	// filter(DILATE, thresh);
+
+	// }
 
 		// ctracker.draw(drawCanvas);
 	
