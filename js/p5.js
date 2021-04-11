@@ -45,29 +45,23 @@ function draw() {
 
 	if (position[62][0] < 400) {
 
-		console.log("invert");
+		// console.log("invert");
 	filter(INVERT);
 
 	} 
 		
 
 	if (position[62][0] < 500) {
-			console.log("gray");
+			// console.log("gray");
 	filter(GRAY);
 
 	}	
 
 	if (position[62][0] < 11000) {
-			console.log("opaque");
+			// console.log("opaque");
 	filter(OPAQUE);
 
 	}
-
-	// if (position[62][0] < 900) {
-	// 		console.log("thresh");
-	// filter(DILATE, thresh);
-
-	// }
 
 		// ctracker.draw(drawCanvas);
 	

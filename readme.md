@@ -8,6 +8,6 @@ nose to follow the movement of the face. When your nose reaches a certain point,
 
 Also in use is the P5 Javascript library, which inserts a canvas into the webpage, which allows the use of Processing sketches. 
 
-Works best in Chrome, and requires access to your webcam.
+Works best in Chrome, and requires access to your webcam. The filters are a bit taxing, so they sometimes take a second to load once your face has moved, and they work best if you keep your head facing forward. 
 
 Github Page for the face tracker: https://github.com/auduno/clmtrackr
